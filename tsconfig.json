@@ -1,3 +1,30 @@
 {
-    "extends": "@tsconfig/react-native/tsconfig.json"
+    "extends": "@tsconfig/react-native/tsconfig.json",
+    "compilerOptions": {
+        "strict": true,
+        "baseUrl": "./",
+        "paths": {
+          "@assets/*": [
+            "./src/assets/*"
+          ],
+          "@components/*": [
+            "./src/components/*"
+          ],
+          "@routes/*": [
+            "./src/routes/*"
+          ],
+          "@screens/*": [
+            "./src/screens/*"
+          ],
+          "@storage/*": [
+            "./src/storage/*"
+          ],
+          "@utils/*": [
+            "./src/utils/*"
+          ]
+        },
+        "types": [
+          "@types/styled-components-react-native",
+        ]
+    }
 }

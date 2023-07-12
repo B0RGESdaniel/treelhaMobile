@@ -1,9 +1,14 @@
-import { ActivityIndicator } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 import { Login } from "@screens/Login";
+import { Loading } from '@components/Loading';
 
 import { ThemeProvider } from 'styled-components';
-import { useFonts, Montserrat_500Medium, Montserrat_600SemiBold, Montserrat_700Bold } from '@expo-google-fonts/montserrat';
+import { 
+  useFonts, 
+  Montserrat_500Medium, 
+  Montserrat_600SemiBold, 
+  Montserrat_700Bold 
+} from '@expo-google-fonts/montserrat';
 
 import theme from './src/theme'
 
@@ -23,7 +28,7 @@ export default function App() {
           <Login />
         </>
       )
-      : (<ActivityIndicator />)
+      : (<Loading />)
       }
     </ThemeProvider>
   );  

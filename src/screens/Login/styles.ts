@@ -1,11 +1,14 @@
 import styled from "styled-components/native";
 
-export const Container = styled.View`
+import { SafeAreaView } from "react-native-safe-area-context";
+
+export const Container = styled(SafeAreaView)`
     flex: 1;
     background-color: ${({ theme }) => theme.COLORS.DARK};
     align-items: center;
     justify-content: center;
     gap: 40px;
+    padding: 24px;
 `;
 
 export const Title = styled.Text`
@@ -26,7 +29,8 @@ export const GoogleButton = styled.TouchableOpacity`
     justify-content: center;
     gap: 10px;
     background-color: ${({ theme }) => theme.COLORS.GRAY};
-    padding: 12px 40px;
+    padding: 14px 0;
+    width: 90%;
     border-radius: 6px;
 `;
 

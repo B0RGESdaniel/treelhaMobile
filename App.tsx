@@ -1,6 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
-import { Login } from "@screens/Login";
 import { Loading } from '@components/Loading';
+
+import { Routes } from './src/routes';
 
 import { ThemeProvider } from 'styled-components';
 import { 
@@ -21,15 +22,11 @@ export default function App() {
 
   return (
     <ThemeProvider theme={theme}>
-      { fontsLoaded ? 
-      (
-        <>
-          <StatusBar style="inverted" />
-          <Login />
-        </>
-      )
-      : (<Loading />)
-      }
+      <StatusBar 
+       style="inverted" 
+       translucent 
+      />
+      { fontsLoaded ? <Routes /> : <Loading /> }
     </ThemeProvider>
   );  
 }
